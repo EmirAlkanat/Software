@@ -1,4 +1,4 @@
-📌 Proje Adı
+📌 
 Html-Css ile Yaptigim ufak projler 
 py ile yaptigim ufak projler
 

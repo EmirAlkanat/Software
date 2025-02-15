@@ -1,3 +1,7 @@
+📌 Proje Adı
+Html-Css ile Yaptigim ufak projler 
+py ile yaptigim ufak projler
+
 🎨 Kullanılan Teknolojiler
 
 HTML5 – Yapısal iskelet

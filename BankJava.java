@@ -10,16 +10,16 @@ public class BankJava {
                               "Quit = Q";
 
         Scanner scanner = new Scanner(System.in);
-
-        double Money1 = 2500;
-        String Name1Iban = "12 4324 2342 7675 4455 6666";
+        String Vote;
         String Name1User = "User1";
         String name1Password = "1234";
-
-        double Money2 = 1250;
-        String Name2Iban = "23 4444 5555 7777 4455 6666";
+        double Money1 = 2500;
+        String Name1Iban = "12 4324 2342 7675 4455 6666";
+      
         String Name2User = "User2";
         String name2Password = "4321";
+        double Money2 = 1250;
+        String Name2Iban = "23 4444 5555 7777 4455 6666";
 
         System.out.println("Welcome to ATM");
         System.out.print("Please enter a username: ");
@@ -30,10 +30,11 @@ public class BankJava {
 
         if (User.equals(Name1User) && password.equals(name1Password)) {
             System.out.println("Welcome, " + Name1User);
-            System.out.println(whichProcess);
-            System.out.print("Please enter a number: ");
-            String Vote = scanner.nextLine();
-
+            do {
+            	System.out.println(whichProcess);
+                System.out.print("Please enter a number: ");
+                Vote = scanner.nextLine();
+			
             switch (Vote) {
                 case "1":
                     System.out.println("Balance: " + Money1);
@@ -69,6 +70,9 @@ public class BankJava {
                 default:
                     System.out.println("Invalid option.");
             }
+            } while (!Vote.equalsIgnoreCase("Q"));
+
+            
         } else if (User.equals(Name2User) && password.equals(name2Password)) {
             System.out.println("Welcome, " + Name2User);
             System.out.println(whichProcess);

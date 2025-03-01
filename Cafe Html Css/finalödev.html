@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="finalcss.css" rel="stylesheet">
+    <title>APO Cafe - Sepetli Menü</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="user-menu">
+            <i class="fa-solid fa-web-awesome"></i>
+            <button>APO Cafe</button>
+            <div class="user-menus">
+                <form>
+                    <h1>HOŞGELDİNİZ</h1>
+                    <a href="finalödev.html"><i class="fa-solid fa-house"></i> ANASAYFA</a>
+                    <a href="hakkımızda.html"><i class="fa-solid fa-cart-shopping"></i></i> HAKKIMIZDA</a>
+                    <a href="iletisim.html"><i class="fa-solid fa-phone"></i> İLETİŞİM</a>
+                    <a href="sorularınız.html"><i class="fa-regular fa-comment"></i> SORUNLARINIZ</a>
+                </form>
+               
+            </div>
+            
+        </div>
+        <div class="user-menu">
+            <button>Üye Girişi</button>
+            <div class="user-menu-content">
+                <form>
+                    <h4>Üye Girişi</h4>
+                    <input type="email" placeholder="E-posta" required>
+                    <input type="password" placeholder="Şifre" required>
+                    <button type="submit">Giriş Yap</button>
+                </form>
+                <form>
+                    <h4>Üye Ol</h4>
+                    <input type="text" placeholder="Ad Soyad" required>
+                    <input type="email" placeholder="E-posta" required>
+                    <input type="password" placeholder="Şifre" required>
+                    <input type="date" placeholder="Doğum Tarihi" required>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="Kadın" required> Kadın
+                        </label> <br>
+                        <label>
+                            <input type="radio" name="gender" value="Erkek" required> Erkek
+                        </label>
+                    </div>
+                    <button type="submit">Kayıt Ol</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menü Bölümü -->
+    <div class="menu-section">
+        <p><span class="highlighted">MENÜMÜZ</span></p>
+
+        <div class="menu-item" data-name="Demlenmiş Çay" data-price="20">
+            <i class="fa-solid fa-mug-hot"></i>
+            <h3>Demlenmiş Çay</h3>
+            <p>20₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Latte Kahve" data-price="35">
+            <i class="fa-solid fa-mug-saucer"></i>
+            <h3>Latte Kahve</h3>
+            <p>35₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Çikolatalı Pasta" data-price="50">
+            <i class="fa-solid fa-cake-candles"></i>
+            <h3>Çikolatalı Pasta</h3>
+            <p>50₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+        <!-- Daha fazla ürün -->
+        <div class="menu-item" data-name="Yeşil Çay" data-price="25">
+            <i class="fa-solid fa-mug-hot"></i>
+            <h3>Yeşil Çay</h3>
+            <p>25₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Americano Kahve" data-price="30">
+            <i class="fa-solid fa-mug-hot"></i>
+            <h3>Americano Kahve</h3>
+            <p>30₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Demlenmemiş Çay" data-price="20">
+            <i class="fa-solid fa-mug-hot"></i>
+            <h3>Demlenmemiş Çay</h3>
+            <p>20₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Kazandibi" data-price="20">
+            <i class="fa-solid fa-cake-candles"></i>
+            <h3>Kazandibi</h3>
+            <p>20₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Sufle" data-price="20">
+            <i class="fa-solid fa-cake-candles"></i>
+            <h3>Sufle</h3>
+            <p>20₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Lokma Tatlısı" data-price="20">
+            <i class="fa-solid fa-cake-candles"></i>
+            <h3>Lokma Tatlısı</h3>
+            <p>20₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+        <div class="menu-item" data-name="Mozaik Pasta" data-price="20">
+            <i class="fa-solid fa-cake-candles"></i>
+            <h3>Mozaik Pasta</h3>
+            <p>20₺</p>
+            <button onclick="addToCart(this)">Sepete Ekle</button>
+        </div>
+    </div>
+
+    <!-- Sepet Bölümü -->
+    <div id="cart"> <h2>SEPETİNİZ BURADA TOPLANACKTIR.</h2>
+        </div>

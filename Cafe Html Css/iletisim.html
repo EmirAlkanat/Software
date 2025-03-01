@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="finalcss.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>İletişim - APO Cafe</title>
+    <style>
+       h1, h2, h3 {
+    color: #ff7e5f;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="user-menu">
+            <i class="fa-solid fa-web-awesome"></i>
+            <button>APO Cafe</button>
+            <div class="user-menus">
+                <form>
+                    <h1>HOŞGELDİNİZ</h1>
+                    <a href="finalödev.html"><i class="fa-solid fa-house"></i> ANASAYFA</a>
+                    <a href="hakkımızda.html"><i class="fa-solid fa-cart-shopping"></i></i> HAKKIMIZDA</a>
+                    <a href="iletisim.html"><i class="fa-solid fa-phone"></i> İLETİŞİM</a>
+                    <a href="sorularınız.html"><i class="fa-regular fa-comment"></i> SORUNLARINIZ</a>
+                </form>
+               
+            </div>
+            
+        </div>
+        <div class="user-menu">
+            <button>Üye Girişi</button>
+            <div class="user-menu-content">
+                <form>
+                    <h4>Üye Girişi</h4>
+                    <input type="email" placeholder="E-posta" required>
+                    <input type="password" placeholder="Şifre" required>
+                    <button type="submit">Giriş Yap</button>
+                </form>
+                <form>
+                    <h4>Üye Ol</h4>
+                    <input type="text" placeholder="Ad Soyad" required>
+                    <input type="email" placeholder="E-posta" required>
+                    <input type="password" placeholder="Şifre" required>
+                    <input type="date" placeholder="Doğum Tarihi" required>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="Kadın" required> Kadın
+                        </label> <br>
+                        <label>
+                            <input type="radio" name="gender" value="Erkek" required> Erkek
+                        </label>
+                    </div>
+                    <button type="submit">Kayıt Ol</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="contact-container">
+
+            <!-- İletişim Bilgileri -->
+            <div class="contact-info">
+                <h3>İletişim Bilgileri</h3>
+                <p><strong>Adres:</strong> APO Cafe, Örnek Mah. No:5, İstanbul</p>
+                <p><strong>Telefon:</strong> +90 555 555 55 55</p>
+                <p><strong>E-posta:</strong> <a href="apocafe@example.com">apocafe@example.com</a></p>
+                <p><strong>Çalışma Saatleri:</strong> 09:00 - 23:00 (Hafta içi ve Hafta sonu)</p>
+            </div>
+
+            <!-- İletişim Formu -->
+            <div class="contact-form">
+                <h3>Bize Ulaşın</h3>
+                <form action="submit_form.php" method="post">
+                    <input type="text" name="name" placeholder="Adınız" required>
+                    <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+                    <input type="text" name="subject" placeholder="Konu" required>
+                    <textarea name="message" placeholder="Mesajınız" required></textarea>
+                    <button type="submit">Gönder</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Harita -->
+        <h2>APO Cafe'yi Ziyaret Edin</h2>
+       
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 APO Cafe | Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- Google Maps API -->
+  
+
+    <!-- Google Maps Script -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.245107861679!2d28.911887!3d41.01989319999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb269175df61%3A0xfee040d3abc709a7!2sMucco%20Cafe%20%26%20Restoran!5e0!3m2!1str!2str!4v1735676666275!5m2!1str!2str" width="1830" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</body>
+</html>

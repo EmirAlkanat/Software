@@ -1,0 +1,426 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Arial', sans-serif; /* Sayfa genelinde Arial yazı tipini kullanır */
+    margin: 0; /* Sayfa çevresindeki dış boşluğu kaldırır */
+    padding: 0; /* Sayfa içindeki boşlukları sıfırlar */
+    background-color: #f9f9f9; /* Sayfanın arka plan rengini açık gri yapar */
+    background-image: url('cafee.jpg'); /* Arka plan resmini belirler */
+    background-size: cover; /* Arka plan resmini sayfayı kaplayacak şekilde boyutlandırır */
+    background-repeat: no-repeat; /* Arka plan resminin tekrarlanmasını engeller */
+    background-position: center; /* Arka plan resmini ortalar */
+    justify-content: center;
+}
+
+/* Header (Başlık) Bölümü */
+header {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Başlık alanında renk geçişi (gradient) uygular */
+    color: white; /* Başlık metnini beyaz yapar */
+    padding: 1rem; /* Başlık alanına iç boşluk ekler */
+    display: flex; /* Flexbox düzenine geçer */
+    justify-content: space-between; /* İçerikleri eşit şekilde sağa sola yerleştirir */
+    align-items: center; /* İçerikleri dikey olarak ortalar */
+}
+header h1 {
+    margin: 0; /* Başlık etiketine dış boşluk eklemez */
+    font-size: 1.5rem; /* Başlık metninin boyutunu 1.5rem olarak ayarlar */
+}
+
+/* Logo Alanı */
+.logo {
+    display: flex; /* Logo öğesini esnek bir düzen ile hizalar */
+    align-items: center; /* Logo ve metni dikeyde ortalar */
+}
+.logo img {
+    width: 50px; /* Logo resminin genişliğini 50px olarak ayarlar */
+    height: 50px; /* Logo resminin yüksekliğini 50px olarak ayarlar */
+    margin-right: 10px; /* Logo ile metin arasında 10px boşluk bırakır */
+}
+
+/* Kullanıcı Menü Bölümü */
+.user-menu {
+    position: relative; /* Menü pozisyonunu belirler */
+    display: inline-block; /* Menüyü satır içi blok olarak görüntüler */
+}
+
+.user-menu button {
+    background-color: #333; /* Düğme rengi koyu gri olur */
+    color: white; /* Düğme üzerindeki yazı beyaz olur */
+    border: none; /* Çerçevesiz düğme */
+    padding: 10px 15px; /* Düğmeye iç boşluk ekler */
+    font-size: 14px; /* Düğme yazı boyutu */
+    cursor: pointer; /* Fareyle üzerine gelince el simgesi görünür */
+    border-radius: 5px; /* Düğmeye yuvarlak köşeler ekler */
+}
+
+/* Kullanıcı Menü İçeriği */
+.user-menu-content {
+    display: none; /* Menünün varsayılan olarak görünmemesini sağlar */
+    position: absolute; /* Menü, konum olarak kullanıcı menüsünün altında yer alır */
+    top: 100%; /* Menü öğesi, kullanıcı menüsünün hemen altında yer alır */
+    right: 0; /* Menü sağ tarafa hizalanır */
+    background-color: white; /* Menü arka planı beyaz olur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menünün etrafına gölge efekti ekler */
+    border-radius: 5px; /* Menüyü yuvarlatılmış köşelerle şekillendirir */
+    padding: 10px; /* Menü içindeki öğelere boşluk ekler */
+    z-index: 1000; /* Menü, diğer öğelerin üzerinde görünür */
+    width: 250px; /* Menü genişliğini 250px olarak ayarlar */
+}
+
+/* Kullanıcı Menü İçeriğindeki Giriş Alanı */
+.user-menu-content input {
+    width: calc(100% - 20px); /* Giriş alanının genişliği ayarlanır */
+    padding: 8px; /* Giriş alanına iç boşluk ekler */
+    margin: 5px 0; /* Giriş alanı çevresine boşluk ekler */
+    border: 1px solid #ddd; /* Giriş alanı için gri bir sınır ekler */
+    border-radius: 5px; /* Giriş alanına yuvarlatılmış köşeler verir */
+    font-size: 14px; /* Giriş alanının yazı boyutunu ayarlar */
+}
+
+.user-menu-content label{
+    color: #ff7e5f;
+    display: inline-flex; /* Radyo butonunu ve metni yan yana yerleştirir */
+    align-items: center; /* Yatayda ortalar */
+    margin-right: 10px; /* Radyo butonları arasında boşluk bırakır */
+}
+
+.user-menu-content h4{
+    text-align: center;
+    background-color: #333; /* Düğme rengi koyu gri olur */
+    color: white; /* Düğme üzerindeki yazı beyaz olur */
+    border: none; /* Çerçevesiz düğme */
+    padding: 10px 15px; /* Düğmeye iç boşluk ekler */
+    font-size: 14px; /* Düğme yazı boyutu */
+    border-radius: 5px; /* Düğmeye yuvarlak köşeler ekler */
+}
+/* Kullanıcı Menüsündeki Düğme */
+.user-menu-content button {
+    width: 100%; /* Düğme genişliği tam olarak menüyle uyumlu olur */
+    padding: 10px; /* Düğmeye iç boşluk ekler */
+    background-color: #ff7e5f; /* Düğme arka planı kırmızımsı olur */
+    border: none; /* Düğme kenarlığı yok edilir */
+    color: white; /* Düğme üzerindeki yazıyı beyaz yapar */
+    font-size: 14px; /* Yazı boyutunu ayarlar */
+    cursor: pointer; /* Fare ile tıklanabilir hale gelir */
+    border-radius: 5px; /* Yuvarlatılmış köşeler ekler */
+    margin-top: 10px; /* Düğme ile üstündeki öğe arasında boşluk bırakır */
+}
+
+/* Kullanıcı Menüsüne Fareyle Üzerine Gelince Menü Gösterme */
+.user-menu:hover .user-menu-content {
+    display: block; /* Kullanıcı menüsünün üzerine gelindiğinde içerik görünür hale gelir */
+}
+
+/* Kullanıcı Menüsünün Diğer Bağlantıları */
+.user-menus {
+    display: none; /* Menü başta gizlidir */
+    position: absolute; /* Menü öğeleri kullanıcı menüsünün altında sabitlenir */
+    top: 100%; /* Menü öğesinin üst kenarı, kullanıcı menüsünün hemen altına yerleştirilir */
+    left: 0; /* Menü sol tarafa hizalanır */
+    background-color: white; /* Arka plan beyaz yapılır */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgeleme efekti ekler */
+    border-radius: 5px; /* Menüye yuvarlatılmış kenarlar verir */
+    padding: 10px; /* Menü içindeki öğelere iç boşluk ekler */
+    z-index: 1000; /* Menü öğelerinin ön planda gözükmesini sağlar */
+    width: 300px; /* Menü genişliğini 300px olarak belirler */
+    height: 200px; /* Menü yüksekliğini 200px olarak belirler */
+}
+
+/* Kullanıcı Menüsündeki Form Giriş Alanı */
+.user-menus input {
+    width: calc(100% - 20px); /* Giriş alanının genişliğini ayarlar */
+    padding: 8px; /* İç boşluk ekler */
+    margin: 5px 0; /* Boşlukları ayarlar */
+    border: 1px solid #ddd; /* Çerçeve belirler */
+    border-radius: 5px; /* Yuvarlatılmış kenarlar ekler */
+    font-size: 14px; /* Yazı boyutunu ayarlar */
+}
+.user-menu h1{
+    background-color: #9d3b3b; /* Düğme rengi koyu gri olur */
+    color: white; /* Düğme üzerindeki yazı beyaz olur */
+    border: none; /* Çerçevesiz düğme */
+    padding: 10px 15px; /* Düğmeye iç boşluk ekler */
+    font-size: 14px; /* Düğme yazı boyutu */
+    text-align: center;
+    border-radius: 25px; /* Düğmeye yuvarlak köşeler ekler */
+    
+}
+/* Kullanıcı Menüsündeki Bağlantılar */
+.user-menus a {
+    display: block; /* Bağlantı etiketlerini blok düzende görüntüler */
+    width: 300px; /* Bağlantının genişliğini 300px yapar */
+    height: 20px; /* Yüksekliğini 20px olarak belirler */
+    padding: 2px; /* Bağlantıya iç boşluk ekler */
+    background-color: #ff7e5f; /* Bağlantının arka plan rengini kırmızımsı yapar */
+    border: none; /* Kenarlık yok eder */
+    color: white; /* Yazı rengini beyaz yapar */
+    font-size: 14px; /* Yazı boyutunu belirler */
+    cursor: pointer; /* Fareyle üzerine gelince el simgesi çıkar */
+    border-radius: 19px; /* Yuvarlatılmış köşeler ekler */
+    margin-top: 10px; /* Bağlantılar arasında üstten boşluk bırakır */
+    text-align: center; /* Metni ortalar */
+    text-decoration: none; /* Bağlantının altını çizmeyi engeller */
+}
+
+/* Kullanıcı Menü Üzerine Gelince Bağlantıları Gösterme */
+.user-menu:hover .user-menus {
+    
+    display: block; /* Menü bağlantıları, üzerine gelindiğinde görünür olur */
+}
+
+/* Menü Bölümü */
+.menu-section {
+    color: #462121; /* Yazı rengini */
+    padding: 20px; /* İçeriğe boşluk ekler */
+}
+.menu-section div p{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.highlighted {
+    display: inline-block;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ff7e5f; /* Yalnızca bu span etiketinin arka planı turuncu olur */
+    color: #462121; /* Yazı rengi beyaz olur */
+    padding: 0 530px; /* Yazı ve arka plan arasında boşluk */
+    border-radius: 30px; /* Köşe yuvarlaması */
+}
+.highlighted p{
+    text-align: center;
+}
+
+.menu-section div {
+    background-color: #ff7e5f; /* Bölüm arka planını kırmızımsı yapar */
+    opacity: 0.8; /* Opaklık %80 olur */
+}
+
+/* Menü Öğesi */
+.menu-item {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: inline-block; /* Menü öğeleri yan yana sıralanır */
+    width: 200px; /* Her bir öğe için genişlik ayarlanır */
+    margin: 10px; /* Menü öğeleri arasında boşluk bırakılır */
+    padding: 15px; /* Menü öğelerine iç boşluk eklenir */
+    border: 1px solid #7c4a14; /* Menü öğelerine sınır ekler */
+    border-radius: 5px; /* Kenarları yuvarlatır */
+    text-align: center; /* Metni ortalar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Üzerine gelince dönüşüm ve gölge efektleri ekler */
+}
+
+/* Menü Öğesindeki Resimler */
+.menu-item img {
+    width: 150px; /* Resim genişliği */
+    height: 150px; /* Resim yüksekliği */
+    border-radius: 5px; /* Resimlere yuvarlatılmış köşeler verir */
+}
+
+/* Menü Öğesinin Üzerine Gelince Efekt */
+.menu-item:hover {
+    transform: scale(1.1); /* Menü öğesini büyütür */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölge ekler */
+}
+
+/* Menü Öğesi Başlığı */
+.menu-item h3 {
+    font-size: 18px; /* Menü başlığının yazı boyutunu ayarlar */
+    margin: 10px 0; /* Başlık etrafında boşluk bırakır */
+}
+
+/* Menü Öğesi Altı Metin */
+.menu-item p {
+    font-size: 14px; /* Yazı boyutunu 14px yapar */
+    margin: 5px 0; /* Paragraf arasında boşluk bırakır */
+}
+
+/* Menü Öğesi Düğmesi */
+.menu-item button {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px; /* Düğmeye iç boşluk ekler */
+    background-color:#b73434; /* Düğme arka plan rengini kırmızımsı yapar */
+    border: none; /* Kenarlığı kaldırır */
+    color: white; /* Düğme metninin rengini beyaz yapar */
+    cursor: pointer; /* Düğme tıklanabilir hale gelir */
+    border-radius: 5px; /* Düğme köşelerini yuvarlatır */
+}
+
+/* Menü Öğesi Düğmesi Üzerine Gelince Efekt */
+.menu-item button:hover {
+    background-color: #feb47b; /* Düğme üzerine gelindiğinde arka plan rengi değişir */
+}
+
+/* Sepet Alanı */
+#cart {
+    margin: 20px; /* Sepet alanına dış boşluk ekler */
+    padding: 15px; /* Sepet alanına iç boşluk ekler */
+    border: 1px solid #ddd; /* Sepet kenarlığı belirler */
+    border-radius: 5px; /* Sepet kenarlarını yuvarlatır */
+    background-color: #b73434; /* Sepet arka planını beyaz yapar */
+}
+
+#cart h2 {
+    font-weight: 100px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px; /* Sepet başlığının yazı boyutunu 20px yapar */
+}
+
+/* Sepet Öğeleri Listele */
+#cart ul {
+    list-style: none; /* Liste işaretlerini kaldırır */
+    padding: 0; /* Liste etiketleri arasındaki padding'i sıfırlar */
+}
+
+#cart ul li {
+    margin: 5px 0; /* Sepet öğeleri arasındaki boşluğu 5px yapar */
+    font-size: 16px; /* Sepet öğeleri yazı boyutunu ayarlar */
+}
+
+.about-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px #ff7e5f;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.about-container img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.about-container p {
+    color: #ff7e5f;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.team {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.team-member {
+    text-align: center;
+    margin: 0 15px;
+}
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.team-member h3 {
+    color: #ff7e5f;
+}
+footer {
+    background-color: #ff7e5f;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-container input,
+.form-container textarea,
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+.form-container textarea {
+    height: 150px;
+    resize: vertical;
+}
+.form-container button {
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background-color: #feb47b;
+}
+.contact-info {
+    background-color: #ff7e5f;
+    color: black;
+    text-align: center;
+    margin-top: 40px;
+}
+section {
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contact-info {
+    flex: 1;
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px#ff7e5f;
+}
+.contact-info h3 {
+    color: #ff7e5f;
+}
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+.contact-form {
+    flex: 2;
+    margin: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #ff7e5f;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.contact-form textarea {
+    height: 150px;
+}
+.contact-form button {
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #feb47b;
+}
+.map {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    background-color: #ddd;
+}
